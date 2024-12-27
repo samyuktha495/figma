@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        .header-left{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .links a{
+            padding: 20px;
+            text-decoration: none;
+            color: rgb(red, green, blue);
+            font-size: 20px;
+        }
+        .header-right{
+            display: flex;
+             gap: 20px;
+        
+        }
+        .banner-body {
+    margin-left: 30px;
+
+}
+
+.banner-body>input {
+    border: none;
+}
+
+.banner-body>input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(244, 63, 8);
+}
+.banner body img {
+    background-color: #C1DCDC;
+    border-radius: 4px;
+}
+
+.banner {
+    background-color: #C1DCDC;
+    height: 320px;
+    width: 85vw;
+    margin-left: 90px;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 20px;
+}
+h3 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    padding-top: 30px;
+    margin-top: 20px;
+    font-family: arial;
+    font-weight: 700;
+}
+
+.types {
+    display: flex;
+    gap: 30px;
+    margin-top: 5px;
+    margin-left: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.plant{
+    position: absolute;
+    top:70px;
+    right: 140px;
+    z-index: 1;
+}
+.p1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.circle{
+    position:absolute;
+    top:60px;
+    right:95px;
+}
+.downarrow{
+    position: absolute;
+    top:10px;
+    right:50px;
+}
+.leftarrow{
+    position: absolute;
+    top:190px;
+    right:400px;
+}
+.cards{
+    display:flex;
+    gap:50px;  
+    margin-left: 10px; 
+}
+.favplant1{
+    height:400px;
+    width:260px;
+    margin-top:15px;
+    margin-left: 94px;
+    padding: 30px 30px;
+}
+.favplant1 h2{
+    font-family: arial;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.favplant1 span{
+    font-family: arial;
+    font-size: 20px;
+    color: rgb(95, 97, 97);
+
+}
+.favplant{
+    height:400px;
+    width:260px;
+    margin-top:15px;
+}
+.favplant img{
+    height:80%;
+    width:100%;
+}
+p img{
+    width:20px;
+}
+.favplant1 p{
+    display: flex;
+    margin-top: 20px;
+    gap:5px;
+    background-color:#C1DCDC;
+    margin-right: 55px;
+    padding:7px 2px ;
+    justify-content: center;
+    border-radius: 10px;
+}
+.About{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.About span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight:600;
+    margin-top: 70px;
+}
+.About p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(95, 97, 97);
+}
+.Services{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.Services h4{
+    margin-top: 20px;
+}
+.Services p{
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(95, 97, 97);
+    font-weight: 400;
+}
+.serv1{
+    width:300px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.serv2{
+    width:300px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.serv3{
+    width:300px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.Categories{
+    background-color: #C1DCDC;
+    height:600px;
+    margin-top: 70px;
+    display: flex;
+    gap:30px;
+    justify-content: center;
+}
+.Categories img{
+    width:280px;
+    height:380px;
+}
+.plan1{
+    display: flex;
+    flex-direction: column;
+}
+.plan2{
+    display:flex;
+    flex-direction: column;
+    width:280px;
+}
+.plan2 div{
+    display: flex;
+    gap:10px;
+    justify-content: center;
+}
+.plan3{
+    display:flex;
+    flex-direction: column;
+}
+.plant1{
+    position: relative;
+    top:-48px;
+}
+.plant2{
+    position: relative;
+    top:48px;
+}
+.plant3{
+    position: relative;
+    top:-48px;
+}
+.Customers{
+    display: flex;
+    justify-content: space-between;
+    width:85vw;
+    margin-left: 90px;
+    margin-top: 20px;
+}
+.Customers p{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    width:40%;
+    font-weight: 600;
+    position: relative;
+    top:50px;
+}
+.Customers img{
+    height:8px;
+    width:84px;
+    top:50px;
+    position: relative;
+}
+.reviews1{
+    display: flex;
+    gap:30px;
+}
+.reviews1 .john{
+    height:200px;
+    width:500px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    background-color: #C1DCDC;
+    padding: 25px;
+    border-radius: 10px;
+    margin-left: 90px;
+}
+.reviews .john{
+    height:200px;
+    width:500px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    background-color: #C1DCDC;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.john img{
+    height:120px;
+    top:-18px;
+    position: relative;
+}
+.youtube{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right:420px;
+    top:170px;
+}
+.reviews .youtube{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right:-110px;
+    top:-110px;
+}
+.star{
+    position: relative;
+    top:170px;
+    right:180px;
+}
+.reviews .star{
+    position: relative;
+    top:-110px;
+    right:40px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.text{
+    display: flex;
+    gap:10px;
+}
+.footer{
+    background-color: #C1DCDC;
+    height:250px;
+    width:100%;
+    display:flex;
+}
+.foot1{
+    width:60%;
+}
+.foot1 img{
+   height:50px;
+}
+.foot1 h2{
+   padding-top:30px;
+   margin-left: 50px;
+   margin-bottom: 20px;
+}
+.foot1 p{
+    margin-left:50px;
+}
+.foot1 .im1{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right:20px;
+}
+.foot1 img{
+    margin-right: 20px;
+}
+.foot2{
+    display: flex;
+    gap:50px;
+    margin-top: 40px;
+}
+.foot2 div{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.foot2 div p{
+    color:rgb(95, 97, 97);
+    font-family: Arial, Helvetica, sans-serif;
+}
+div h4{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h2>GREENMIND</h2>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#products">products</a>
+                <a href="contacts">contacts</a>
+            </div>
+        </div>
+        <div class="header-right">
+            <img src="./cart.png" alt=""width=30px height=30px>
+            <img src="./profile.png" alt=""width=30px height=30px>
+            <img src="./linee.png" alt=""width=2px height="30px">
+            <img src="./line.png" alt=""width=30px height=30px>
+            
+        </div>
+    </header>
+    <div class="banner">
+        <h3>Buy your <br>dream plants</h3>
+
+        <div class="types">
+            <div class="species">
+                <span>50+</span>
+                <p>Plant species</p>
+            </div>
+            <div class="line">
+                <img src="line2.png" width="2px" height="40px">
+            </div>
+            <div class="plants">
+                <span>100+</span>
+                <p>Customers</p>
+            </div>
+        </div>
+        <div style="background-color: white; border: 1px solid lightgreen;display:inline;padding:5px 20px;margin-left: 40px;"
+        class="banner-body">
+        <input type="text" placeholder="search here..">
+        <img src="./search.png" width="16px"
+            style="background-color: #C1DCDC; height:18px; border-radius: 3px;padding:2px;position: relative;top:3px;">
+    </div>
+    <div class="plant">
+        <img src="./plant.png" width="200px">
+    </div>
+    <div class="circle">
+        <img src="./circle.png" width="300px">
+    </div>
+    <div class="downarrow">
+        <img src="./downarrow.png" width="75px" height="80px">
+    </div>
+    <div class="leftarrow">
+        <img src="./leftarrow.png" width="75px" height="80px">
+    </div>
+</div>
+<div class="cards">
+    <div class="favplant1">
+        <h2>Best Selling Plants</h2>
+        <span>Easiest way to healthy life by buying your favourite plants</span>
+        <p>See more<img src="https://cdn-icons-png.flaticon.com/512/109/109617.png"></p>
+    </div>
+    <div class="favplant">
+        <img src="./natural.png">
+        <h4 style="margin-top: 5px;">Natural plants</h4>
+        <p style="height=20px;margin-top: 5px;font-family: Arial, Helvetica, sans-serif;color: rgb(95, 97, 97)"><i
+                class='fas fa-ruble-sign'></i>1400 </p>
+    </div>
+    <div class="favplant">
+        <img src="./artificial.png">
+        <h4 style="margin-top: 5px;">Artificial plants</h4>
+        <p style="height=20px;margin-top: 5px;font-family: Arial, Helvetica, sans-serif;color: rgb(95, 97, 97)"><i
+                class='fas fa-ruble-sign'></i>900 </p>
+    </div>
+    <div class="favplant">
+        <img src="./arificial2.png">
+        <h4 style="margin-top: 5px;">Artificial plants</h4>
+        <p style="height=20px;margin-top: 5px;font-family: Arial, Helvetica, sans-serif;color: rgb(95, 97, 97)"><i
+                class='fas fa-ruble-sign'></i>3500 </p>
+    </div>
+</div>
+<div class="About">
+    <span>About us</span>
+    <p>Order now and appreciate the beauty of nature</p>
+</div>
+<div class="Services">
+    <div class="serv1">
+        <img src="./large.png" height="90px" width="120px">
+        <h4>Large Assortment</h4>
+        <p>we offer many different kinds of products with fewer variations in each category.</p>
+    </div>
+    <div class="serv2">
+        <img src="./fast.png" height="80px" width="80px">
+        <h4>Fast & Free Shipping</h4>
+        <p>4-day or less delivery time,free shipping and expedited delivery option.</p>
+    </div>
+    <div class="serv3">
+        <img src="./support.png" height="80px" width="80px">
+        <h4>24/7 Support</h4>
+        <p>answers to any business related inquiry 24/7 and in real-time.</p>
+    </div>
+</div>
+<div class="About">
+    <span>Categories</span>
+    <p>Find what you are looking for</p>
+</div>
+<div class="Categories">
+    <div class="plan1">
+        <img class="plant1" src="./alovera.png">
+        <span style="position: relative;top: -40px; left:90px; font-family: Arial, Helvetica, sans-serif; font-weight: 600;">Natural Plants</span>
+    </div>
+    <div class="plan2">
+        <img class="plant2" src="./accessories.png">
+        <span style="position: relative;top: 70px; left:70px; font-family: Arial, Helvetica, sans-serif; font-weight: 600;">Plant Accessories</span>
+        <p style="position: relative;top: 70px; left:0px; text-align:center;font-family: Arial, Helvetica, sans-serif; font-weight: 500;color:rgb(95, 97, 97)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos.</p>
+        <div style="background-color: beige; text-align: center;padding: 5px 0px;margin-right:120px;position:relative;top:90px; left:60px;border-radius: 10px;">Explore<i class='fas fa-arrow-right'></i></div>
+    </div>
+    <div class="plan3">
+        <img class="plant3" src="./artificia.png">
+        <span style="position: relative;top: -40px; left:90px; font-family: Arial, Helvetica, sans-serif; font-weight: 600;">Artificial Plants</span>
+    </div>
+</div>
+<div class="Customers">
+    <p>What customers say about GREENMIND?</p>
+    <img src="./side.png">
+</div>
+<div class="text">
+    <div class="reviews1">
+        <div class="john">
+            <p style="font-family: Arial, Helvetica, sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Consequatur officiis molestias temporibus harum veritatis iure
+                nemo tenetur, ea, sed distinctio modi quibusdam voluptas illo
+                delectus quae nihil eos repellat.
+                consectetur adipisicing elit.</p>
+            <img src="./john.png">
+        </div>
+        <div class="content">
+            <div class="youtube">
+                <p style="font-family: Arial, Helvetica, sans-serif;">John Doe</p>
+                <span style="color:rgb(145, 149, 149);font-family: Arial, Helvetica, sans-serif;">Youtuber</span>
+            </div>
+            <div class="star">
+                <span class="fa fa-star"></span><span style="font-family: Arial, Helvetica, sans-serif;">4.5</span>
+            </div>
+        </div>
+    </div>
+    <div class="reviews">
+        <div class="john">
+            <p style="font-family: Arial, Helvetica, sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Consequatur officiis molestias temporibus harum veritatis iure
+                nemo tenetur, ea, sed distinctio modi quibusdam voluptas illo
+                delectus quae nihil eos repellat.
+                consectetur adipisicing elit.</p>
+                <img src="./john2.png">
+            </div>
+            <div class="content">
+                <div class="youtube">
+                    <p style="font-family: Arial, Helvetica, sans-serif;">John Doe</p>
+                    <span style="color:rgb(145, 149, 149);font-family:Arial, Helvetica, sans-serif">Youtuber</span>
+                </div>
+                <div class="star">
+                    <span class="fa fa-star"></span><span>4.5</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="foot1">
+            <h2>GREENMIND</h2>
+            <p style="color:rgb(95,97,97); font-family: Arial, Helvetica, sans-serif;">we help you find your dream
+                plant</p>
+            <img src="./facebook.png" class="im1">
+            <img src="./insta.png">
+            <img src="./twitter.png">
+            <p style="color:rgb(95, 97, 97); font-family: Arial, Helvetica, sans-serif; margin-top: 50px;">2023 all
+                Right Reserved Term of use GREENMIND</p>
+
+        </div>
+        <div class="foot2">
+            <div class="info">
+                <h4>Information</h4>
+                <p>About</p>
+                <p>Product</p>
+                <p>Blog</p>
+            </div>
+            <div class="company">
+                <h4>Company</h4>
+                <p>Community</p>
+                <p>Career</p>
+                <p>Our story</p>
+
+            </div>
+            <div class="contact">
+                <h4>Contact</h4>
+                <p>Getting started</p>
+                <p>Pricing</p>
+                <p>Resources</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+    
